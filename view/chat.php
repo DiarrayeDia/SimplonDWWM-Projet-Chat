@@ -2,7 +2,6 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">Type</th>
             <th scope="col">Date</th>
             <th scope="col">Auteur</th>
             <th scope="col">Commentaire</th>
