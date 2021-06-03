@@ -17,23 +17,29 @@ function getDBConnection()
         );
 
         $dbh = new PDO($dsn, $user, $pass, $options);
-        return $dbh;
+        var_dump($dbh);
     } catch (PDOException $e) {
+
         print " Oops ... Erreur de connexion: " . $e->getMessage() . "<br/>";
         die();
     }
+
+    return $dbh;
 }
+
+
 function findAll()
 {
     $dbh = getDBConnection();
-    $query = 'SELECT * 
-    FROM message
-    ORDER BY post_date DESC';
 
-    $req = $dbh->query($query);
+    $req = $dbh->prepare(
+        'SELECT * 
+         FROM message
+         ORDER BY date DESC'
+    );
+    $req->execute();
     $req->setFetchMode(PDO::FETCH_ASSOC);
     $tab = $req->fetchAll();
     $req->closeCursor();
-
     return $tab;
 }

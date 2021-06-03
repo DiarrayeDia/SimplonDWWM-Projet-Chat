@@ -9,15 +9,16 @@
     </thead>
     <tbody>
         <?php
-        for ($i = 0; $i < 5; $i++) {
+        foreach ($tab as $row) {
         ?>
             <tr class="table-light">
-                <td class="col-2">01/06/2021</td>
-                <td class="col-2">camile</td>
-                <td class="col-8">Salut !</td>
+                <td class="col-2"><?= $row["date"] ?></td>
+                <td class="col-2"><?= $row["pseudo"] ?></td>
+                <td class="col-8"><?= $row["message"] ?></td>
             </tr>
         <?php
         }
+
         ?>
     </tbody>
 </table>

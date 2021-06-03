@@ -15,8 +15,10 @@
     <div class="container">
         <h1>Live chat Amazin</h1>
 
-        <?php include("form.php") ?>
-        <?php include("chat.php") ?>
+        <?php
+        $tab = findAll();
+        require "form.php";
+        require  "chat.php";  ?>
 
     </div>
 
