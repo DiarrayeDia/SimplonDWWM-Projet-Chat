@@ -42,3 +42,14 @@ function findAll()
     $req->closeCursor();
     return $tab;
 }
+
+function create(array $post)
+{
+    $dbh = getDBConnection();
+
+    $query = 'INSERT INTO message(pseudo, content) VALUES(:pseudo, :content)';
+    $req = $dbh->prepare($query);
+    $req->bindValue('pseudo', $post['pseudo'], PDO::PARAM_STR);
+    $req->bindValue('content', $post['content'], PDO::PARAM_STR);
+    $req->execute();
+}

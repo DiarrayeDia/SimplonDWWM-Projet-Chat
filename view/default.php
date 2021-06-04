@@ -19,7 +19,8 @@
         <?php
         $tab = findAll();
         require  "chat.php";
-        require "form.php"; ?>
+        require "form.php";
+        ?>
 
     </div>
 
