@@ -6,9 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Live Chat Amazin</title>
-    <link rel="stylesheet" href="https://bootswatch.com/darkly/boostratp.min.css">
+
 </head>
 
 <body>
@@ -17,8 +18,8 @@
 
         <?php
         $tab = findAll();
-        require "form.php";
-        require  "chat.php";  ?>
+        require  "chat.php";
+        require "form.php"; ?>
 
     </div>
 

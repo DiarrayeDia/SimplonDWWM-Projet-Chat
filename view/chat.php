@@ -14,7 +14,7 @@
             <tr class="table-light">
                 <td class="col-2"><?= $row["date"] ?></td>
                 <td class="col-2"><?= $row["pseudo"] ?></td>
-                <td class="col-8"><?= $row["message"] ?></td>
+                <td class="col-8"><?= $row["content"] ?></td>
             </tr>
         <?php
         }

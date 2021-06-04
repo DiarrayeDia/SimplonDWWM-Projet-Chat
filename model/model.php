@@ -17,7 +17,6 @@ function getDBConnection()
         );
 
         $dbh = new PDO($dsn, $user, $pass, $options);
-        var_dump($dbh);
     } catch (PDOException $e) {
 
         print " Oops ... Erreur de connexion: " . $e->getMessage() . "<br/>";
