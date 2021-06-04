@@ -1,4 +1,3 @@
-<!-- Afficher avec une boucle des messages fictifs "en dur" (date&heure, pseudo, message)-->
 <table class="table table-hover">
     <thead>
         <tr>
@@ -13,8 +12,8 @@
         ?>
             <tr class="table-light">
                 <td class="col-2"><?= $row["date"] ?></td>
-                <td class="col-2"><?= $row["pseudo"] ?></td>
-                <td class="col-8"><?= $row["content"] ?></td>
+                <td class="col-2"><?= htmlspecialchars($row["pseudo"]) ?></td>
+                <td class="col-8"><?= htmlspecialchars(nl2br($row["content"])) ?></td>
             </tr>
         <?php
         }
