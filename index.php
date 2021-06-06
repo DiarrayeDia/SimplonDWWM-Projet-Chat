@@ -7,6 +7,6 @@ if ($_POST) {
         create($_POST);
     }
 }
-// $tab = findAll();
 
+$messages = findAll();
 require 'view/default.php';
