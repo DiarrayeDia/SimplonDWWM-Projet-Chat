@@ -29,7 +29,7 @@ function findAll(): array
 {
     $dbh = getDBConnection();
 
-    $req = $dbh->query('SELECT * FROM message');
+    $req = $dbh->query('SELECT * FROM message ORDER BY date DESC limit 10');
     $req->setFetchMode(PDO::FETCH_ASSOC);
 
     $messages = $req->fetchAll();
