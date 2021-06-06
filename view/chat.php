@@ -15,6 +15,7 @@
                 <td class="col-2"><?= $message["date"] ?></td>
                 <td class="col-2"><?= htmlspecialchars($message["pseudo"]) ?></td>
                 <td class="col-8"><?= nl2br(htmlspecialchars($message["content"])) ?></td>
+                <!-- htmlspecialchars avoids xss attacks. -->
             </tr>
         <?php
         }

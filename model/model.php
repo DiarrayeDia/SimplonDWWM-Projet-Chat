@@ -23,17 +23,15 @@ function getDBConnection()
         die();
     }
 }
-function findAll()
+function findAll(): array
 {
     $dbh = getDBConnection();
-    $query = 'SELECT * 
-    FROM message
-    ORDER BY post_date DESC';
 
-    $req = $dbh->query($query);
+    $req = $dbh->query('SELECT * FROM message ORDER BY post_date DESC');
     $req->setFetchMode(PDO::FETCH_ASSOC);
-    $tab = $req->fetchAll();
+
+    $messages = $req->fetchAll();
     $req->closeCursor();
 
-    return $tab;
+    return $messages;
 }
