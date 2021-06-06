@@ -35,3 +35,12 @@ function findAll(): array
 
     return $messages;
 }
+
+function create(array $post)
+{
+    $dbh = getDBConnection();
+    $req = $dbh->prepare('INSERT INTO message(pseudo, content) VALUES(:pseudo, :content)');
+    $req->bindValue('pseudo', $post['pseudo'], PDO::PARAM_STR);
+    $req->bindValue('content', $post['content'], PDO::PARAM_STR);
+    $req->execute();
+}
