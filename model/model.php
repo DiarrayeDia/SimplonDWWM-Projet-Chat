@@ -61,3 +61,10 @@ function checkForm(array $post)
     }
     return $errors;
 }
+
+function delete(int $id)
+{
+    $dbh = getDBConnection();
+    $req = $dbh->prepare('DELETE FROM message WHERE ID = ?');
+    $req->execute([$id]);
+}

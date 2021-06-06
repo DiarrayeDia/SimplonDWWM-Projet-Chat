@@ -10,4 +10,11 @@ if ($_POST) {
 }
 
 $messages = findAll();
+
+if (isset($_GET['delete'])) {
+
+    delete($_GET['delete']);
+    $_POST['pseudo'] = $_GET['pseudo'];
+}
+
 require 'view/default.php';
