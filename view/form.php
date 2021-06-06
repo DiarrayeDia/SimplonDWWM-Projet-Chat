@@ -13,7 +13,23 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" name="submit">Envoyer</button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+
+        <?php
+        if (isset($errors) && !empty($errors)) {
+        ?>
+            <div class="alert alert-dismissible alert-warning">
+                <?php
+                foreach ($errors as $error) {
+                ?>
+                    <p class="mb-0"><?= $error ?></p>
+                <?php
+                }
+                ?>
+            </div>
+        <?php
+        }
+        ?>
 
     </fieldset>
 </form>

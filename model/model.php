@@ -48,3 +48,16 @@ function create(array $post)
     $req->bindValue('content', $post['content'], PDO::PARAM_STR);
     $req->execute();
 }
+
+function checkForm(array $post)
+{
+    $errors = [];
+
+    foreach ($post as $key => $value) {
+        $key = $key === 'content' ? 'message' : $key;
+        if ($value === "") {
+            $errors[] = "Le " . $key . " doit être saisi";
+        }
+    }
+    return $errors;
+}

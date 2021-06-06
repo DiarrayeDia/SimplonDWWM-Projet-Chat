@@ -3,7 +3,8 @@
 require 'model/model.php';
 
 if ($_POST) {
-    if ($_POST['content'] != null && $_POST['pseudo'] != null) {
+    $errors  = checkForm($_POST);
+    if ($errors === []) {
         create($_POST);
     }
 }
