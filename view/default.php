@@ -17,7 +17,6 @@
         <h1>Live chat Amazin</h1>
 
         <?php
-        $tab = findAll();
         require  "chat.php";
         require "form.php";
         ?>

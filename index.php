@@ -7,5 +7,6 @@ if ($_POST) {
         create($_POST);
     }
 }
+// $tab = findAll();
 
 require 'view/default.php';
