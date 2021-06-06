@@ -27,7 +27,7 @@ function findAll(): array
 {
     $dbh = getDBConnection();
 
-    $req = $dbh->query('SELECT * FROM message ORDER BY post_date DESC');
+    $req = $dbh->query('SELECT * FROM message');
     $req->setFetchMode(PDO::FETCH_ASSOC);
 
     $messages = $req->fetchAll();
