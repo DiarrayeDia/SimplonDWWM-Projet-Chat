@@ -15,8 +15,8 @@
     <div class="container">
         <h1>Live chat Amazin</h1>
 
-        <?php include("form.php") ?>
         <?php include("chat.php") ?>
+        <?php include("form.php") ?>
 
     </div>
 

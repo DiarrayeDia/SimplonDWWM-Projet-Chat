@@ -1,5 +1,5 @@
 <?php
 require 'model/model.php';
 
-findAll();
+$messages = findAll();
 require 'view/default.php';
