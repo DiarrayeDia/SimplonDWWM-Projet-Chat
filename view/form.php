@@ -9,7 +9,7 @@
 
             <div class="form-group col-8">
                 <label for="message_fe" class="form-label mt-4" hidden>Message</label>
-                <textarea class="form-control" id="message_fe" rows="3" placeholder="Entrez votre message"></textarea>
+                <textarea name="content" class="form-control" id="message_fe" rows="3" placeholder="Entrez votre message"></textarea>
             </div>
         </div>
 
